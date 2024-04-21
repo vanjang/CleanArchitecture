@@ -9,13 +9,25 @@
 /* Begin PBXBuildFile section */
 		A3CE621C2BD5365600726A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE621B2BD5365600726A56 /* AppDelegate.swift */; };
 		A3CE621E2BD5365600726A56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE621D2BD5365600726A56 /* SceneDelegate.swift */; };
-		A3CE62202BD5365600726A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE621F2BD5365600726A56 /* ViewController.swift */; };
-		A3CE62232BD5365600726A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CE62212BD5365600726A56 /* Main.storyboard */; };
 		A3CE62252BD5365800726A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CE62242BD5365800726A56 /* Assets.xcassets */; };
 		A3CE62282BD5365800726A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CE62262BD5365800726A56 /* LaunchScreen.storyboard */; };
-		A3CE62332BD5365900726A56 /* CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62322BD5365900726A56 /* CleanArchitectureTests.swift */; };
-		A3CE623D2BD5365900726A56 /* CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE623C2BD5365900726A56 /* CleanArchitectureUITests.swift */; };
 		A3CE623F2BD5365900726A56 /* CleanArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE623E2BD5365900726A56 /* CleanArchitectureUITestsLaunchTests.swift */; };
+		A3CE62512BD5519A00726A56 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62502BD5519A00726A56 /* Coordinator.swift */; };
+		A3CE62532BD551B900726A56 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62522BD551B900726A56 /* AppCoordinator.swift */; };
+		A3CE62562BD5527200726A56 /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62552BD5527200726A56 /* DependenciesContainer.swift */; };
+		A3CE62592BD5876300726A56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62582BD5876300726A56 /* HomeViewController.swift */; };
+		A3CE625B2BD5877500726A56 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE625A2BD5877500726A56 /* HomeViewModel.swift */; };
+		A3CE625D2BD5878300726A56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE625C2BD5878300726A56 /* HomeView.swift */; };
+		A3CE625F2BD59E2200726A56 /* HomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE625E2BD59E2200726A56 /* HomeViewCoordinator.swift */; };
+		A3CE62612BD59E9100726A56 /* HomeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62602BD59E9100726A56 /* HomeViewModelType.swift */; };
+		A3CE62642BD5AF6500726A56 /* HomeViewRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62632BD5AF6500726A56 /* HomeViewRepositoryType.swift */; };
+		A3CE62692BD5B21D00726A56 /* HomeViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62682BD5B21D00726A56 /* HomeViewUseCase.swift */; };
+		A3CE626C2BD5B7D700726A56 /* HomeViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE626B2BD5B7D700726A56 /* HomeViewRepository.swift */; };
+		A3CE626F2BD5CB7400726A56 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE626E2BD5CB7400726A56 /* HomeViewModelTests.swift */; };
+		A3CE62712BD5CC4000726A56 /* MockHomeViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62702BD5CC4000726A56 /* MockHomeViewRepository.swift */; };
+		A3CE62742BD5CD3700726A56 /* MockHomeViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62732BD5CD3700726A56 /* MockHomeViewUseCase.swift */; };
+		A3CE62762BD5CE3500726A56 /* MockHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62752BD5CE3500726A56 /* MockHomeViewModel.swift */; };
+		A3CE627D2BD5D67700726A56 /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE627C2BD5D67700726A56 /* HomeViewUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +51,28 @@
 		A3CE62182BD5365600726A56 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CE621B2BD5365600726A56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3CE621D2BD5365600726A56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3CE621F2BD5365600726A56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A3CE62222BD5365600726A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3CE62242BD5365800726A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3CE62272BD5365800726A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3CE62292BD5365800726A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3CE622E2BD5365900726A56 /* CleanArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3CE62322BD5365900726A56 /* CleanArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureTests.swift; sourceTree = "<group>"; };
 		A3CE62382BD5365900726A56 /* CleanArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3CE623C2BD5365900726A56 /* CleanArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITests.swift; sourceTree = "<group>"; };
 		A3CE623E2BD5365900726A56 /* CleanArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A3CE62502BD5519A00726A56 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A3CE62522BD551B900726A56 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A3CE62552BD5527200726A56 /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
+		A3CE62582BD5876300726A56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A3CE625A2BD5877500726A56 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A3CE625C2BD5878300726A56 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A3CE625E2BD59E2200726A56 /* HomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinator.swift; sourceTree = "<group>"; };
+		A3CE62602BD59E9100726A56 /* HomeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelType.swift; sourceTree = "<group>"; };
+		A3CE62632BD5AF6500726A56 /* HomeViewRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRepositoryType.swift; sourceTree = "<group>"; };
+		A3CE62682BD5B21D00726A56 /* HomeViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUseCase.swift; sourceTree = "<group>"; };
+		A3CE626B2BD5B7D700726A56 /* HomeViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRepository.swift; sourceTree = "<group>"; };
+		A3CE626E2BD5CB7400726A56 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		A3CE62702BD5CC4000726A56 /* MockHomeViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewRepository.swift; sourceTree = "<group>"; };
+		A3CE62732BD5CD3700726A56 /* MockHomeViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewUseCase.swift; sourceTree = "<group>"; };
+		A3CE62752BD5CE3500726A56 /* MockHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewModel.swift; sourceTree = "<group>"; };
+		A3CE627C2BD5D67700726A56 /* HomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +123,11 @@
 		A3CE621A2BD5365600726A56 /* CleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
-				A3CE621B2BD5365600726A56 /* AppDelegate.swift */,
-				A3CE621D2BD5365600726A56 /* SceneDelegate.swift */,
-				A3CE621F2BD5365600726A56 /* ViewController.swift */,
-				A3CE62212BD5365600726A56 /* Main.storyboard */,
+				A3CE624B2BD5462300726A56 /* Application */,
+				A3CE624C2BD5462A00726A56 /* Entity */,
+				A3CE624D2BD5463500726A56 /* Presenters */,
+				A3CE62652BD5AFF800726A56 /* Domain */,
+				A3CE624E2BD5464600726A56 /* Data */,
 				A3CE62242BD5365800726A56 /* Assets.xcassets */,
 				A3CE62262BD5365800726A56 /* LaunchScreen.storyboard */,
 				A3CE62292BD5365800726A56 /* Info.plist */,
@@ -113,7 +138,7 @@
 		A3CE62312BD5365900726A56 /* CleanArchitectureTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3CE62322BD5365900726A56 /* CleanArchitectureTests.swift */,
+				A3CE626D2BD5CB5100726A56 /* Presentation */,
 			);
 			path = CleanArchitectureTests;
 			sourceTree = "<group>";
@@ -121,10 +146,157 @@
 		A3CE623B2BD5365900726A56 /* CleanArchitectureUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A3CE623C2BD5365900726A56 /* CleanArchitectureUITests.swift */,
+				A3CE627B2BD5D66400726A56 /* HomeView */,
 				A3CE623E2BD5365900726A56 /* CleanArchitectureUITestsLaunchTests.swift */,
 			);
 			path = CleanArchitectureUITests;
+			sourceTree = "<group>";
+		};
+		A3CE624B2BD5462300726A56 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE621B2BD5365600726A56 /* AppDelegate.swift */,
+				A3CE621D2BD5365600726A56 /* SceneDelegate.swift */,
+				A3CE624F2BD5518500726A56 /* Coordinator */,
+				A3CE62542BD5525500726A56 /* DependenciesContainer */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A3CE624C2BD5462A00726A56 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A3CE624D2BD5463500726A56 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62572BD5875500726A56 /* Home */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		A3CE624E2BD5464600726A56 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE626A2BD5B7BD00726A56 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A3CE624F2BD5518500726A56 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62502BD5519A00726A56 /* Coordinator.swift */,
+				A3CE62522BD551B900726A56 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A3CE62542BD5525500726A56 /* DependenciesContainer */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62552BD5527200726A56 /* DependenciesContainer.swift */,
+			);
+			path = DependenciesContainer;
+			sourceTree = "<group>";
+		};
+		A3CE62572BD5875500726A56 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62582BD5876300726A56 /* HomeViewController.swift */,
+				A3CE625A2BD5877500726A56 /* HomeViewModel.swift */,
+				A3CE62602BD59E9100726A56 /* HomeViewModelType.swift */,
+				A3CE625C2BD5878300726A56 /* HomeView.swift */,
+				A3CE625E2BD59E2200726A56 /* HomeViewCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A3CE62622BD5AEAC00726A56 /* RepositoryInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62632BD5AF6500726A56 /* HomeViewRepositoryType.swift */,
+			);
+			path = RepositoryInterfaces;
+			sourceTree = "<group>";
+		};
+		A3CE62652BD5AFF800726A56 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62672BD5B15600726A56 /* Entities */,
+				A3CE62662BD5B14E00726A56 /* UseCases */,
+				A3CE62622BD5AEAC00726A56 /* RepositoryInterfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A3CE62662BD5B14E00726A56 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62682BD5B21D00726A56 /* HomeViewUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A3CE62672BD5B15600726A56 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A3CE626A2BD5B7BD00726A56 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE626B2BD5B7D700726A56 /* HomeViewRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A3CE626D2BD5CB5100726A56 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62722BD5CD2600726A56 /* Mocks */,
+				A3CE626E2BD5CB7400726A56 /* HomeViewModelTests.swift */,
+				A3CE62772BD5D29200726A56 /* Domain */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A3CE62722BD5CD2600726A56 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62702BD5CC4000726A56 /* MockHomeViewRepository.swift */,
+				A3CE62732BD5CD3700726A56 /* MockHomeViewUseCase.swift */,
+				A3CE62752BD5CE3500726A56 /* MockHomeViewModel.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A3CE62772BD5D29200726A56 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62782BD5D2A900726A56 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A3CE62782BD5D2A900726A56 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A3CE627B2BD5D66400726A56 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE627C2BD5D67700726A56 /* HomeViewUITests.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +405,6 @@
 			files = (
 				A3CE62282BD5365800726A56 /* LaunchScreen.storyboard in Resources */,
 				A3CE62252BD5365800726A56 /* Assets.xcassets in Resources */,
-				A3CE62232BD5365600726A56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +429,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3CE62202BD5365600726A56 /* ViewController.swift in Sources */,
+				A3CE625F2BD59E2200726A56 /* HomeViewCoordinator.swift in Sources */,
+				A3CE62692BD5B21D00726A56 /* HomeViewUseCase.swift in Sources */,
+				A3CE625D2BD5878300726A56 /* HomeView.swift in Sources */,
+				A3CE62512BD5519A00726A56 /* Coordinator.swift in Sources */,
+				A3CE62532BD551B900726A56 /* AppCoordinator.swift in Sources */,
+				A3CE626C2BD5B7D700726A56 /* HomeViewRepository.swift in Sources */,
+				A3CE625B2BD5877500726A56 /* HomeViewModel.swift in Sources */,
 				A3CE621C2BD5365600726A56 /* AppDelegate.swift in Sources */,
+				A3CE62612BD59E9100726A56 /* HomeViewModelType.swift in Sources */,
+				A3CE62562BD5527200726A56 /* DependenciesContainer.swift in Sources */,
+				A3CE62592BD5876300726A56 /* HomeViewController.swift in Sources */,
+				A3CE62642BD5AF6500726A56 /* HomeViewRepositoryType.swift in Sources */,
 				A3CE621E2BD5365600726A56 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +449,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3CE62332BD5365900726A56 /* CleanArchitectureTests.swift in Sources */,
+				A3CE62712BD5CC4000726A56 /* MockHomeViewRepository.swift in Sources */,
+				A3CE626F2BD5CB7400726A56 /* HomeViewModelTests.swift in Sources */,
+				A3CE62762BD5CE3500726A56 /* MockHomeViewModel.swift in Sources */,
+				A3CE62742BD5CD3700726A56 /* MockHomeViewUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3CE623D2BD5365900726A56 /* CleanArchitectureUITests.swift in Sources */,
 				A3CE623F2BD5365900726A56 /* CleanArchitectureUITestsLaunchTests.swift in Sources */,
+				A3CE627D2BD5D67700726A56 /* HomeViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +481,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A3CE62212BD5365600726A56 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3CE62222BD5365600726A56 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A3CE62262BD5365800726A56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,14 +613,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6F36WQVB42;
+				DEVELOPMENT_TEAM = 5G798LHLX6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,14 +642,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6F36WQVB42;
+				DEVELOPMENT_TEAM = 5G798LHLX6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,7 +673,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6F36WQVB42;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = myunghoonso.CleanArchitectureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,7 +693,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6F36WQVB42;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = myunghoonso.CleanArchitectureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,7 +710,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6F36WQVB42;
+				DEVELOPMENT_TEAM = 5G798LHLX6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = myunghoonso.CleanArchitectureUITests;
