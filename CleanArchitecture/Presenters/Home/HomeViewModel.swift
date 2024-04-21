@@ -10,8 +10,10 @@ import Combine
 final class HomeViewModel: HomeViewModelType {
     private var cancellables: [AnyCancellable] = []
     private let action: HomeViewModelAction
+    private let useCase: HomeViewUseCaseType
     
-    init(action: HomeViewModelAction) {
+    init(useCase: HomeViewUseCaseType, action: HomeViewModelAction) {
+        self.useCase = useCase
         self.action = action
     }
     
@@ -20,7 +22,7 @@ final class HomeViewModel: HomeViewModelType {
             .sink(receiveValue: action.pushToCollection)
             .store(in: &cancellables)
             
-        return HomeViewModelOutput(Just("frans_hals"))
+        return HomeViewModelOutput(useCase.fetch())
     }
 
     deinit {

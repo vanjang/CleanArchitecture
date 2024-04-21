@@ -22,6 +22,9 @@
 		A3CE625D2BD5878300726A56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE625C2BD5878300726A56 /* HomeView.swift */; };
 		A3CE625F2BD59E2200726A56 /* HomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE625E2BD59E2200726A56 /* HomeViewCoordinator.swift */; };
 		A3CE62612BD59E9100726A56 /* HomeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62602BD59E9100726A56 /* HomeViewModelType.swift */; };
+		A3CE62642BD5AF6500726A56 /* HomeViewRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62632BD5AF6500726A56 /* HomeViewRepositoryType.swift */; };
+		A3CE62692BD5B21D00726A56 /* HomeViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE62682BD5B21D00726A56 /* HomeViewUseCase.swift */; };
+		A3CE626C2BD5B7D700726A56 /* HomeViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE626B2BD5B7D700726A56 /* HomeViewRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		A3CE625C2BD5878300726A56 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A3CE625E2BD59E2200726A56 /* HomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinator.swift; sourceTree = "<group>"; };
 		A3CE62602BD59E9100726A56 /* HomeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelType.swift; sourceTree = "<group>"; };
+		A3CE62632BD5AF6500726A56 /* HomeViewRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRepositoryType.swift; sourceTree = "<group>"; };
+		A3CE62682BD5B21D00726A56 /* HomeViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUseCase.swift; sourceTree = "<group>"; };
+		A3CE626B2BD5B7D700726A56 /* HomeViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 				A3CE624B2BD5462300726A56 /* Application */,
 				A3CE624C2BD5462A00726A56 /* Entity */,
 				A3CE624D2BD5463500726A56 /* Presenters */,
+				A3CE62652BD5AFF800726A56 /* Domain */,
 				A3CE624E2BD5464600726A56 /* Data */,
 				A3CE62242BD5365800726A56 /* Assets.xcassets */,
 				A3CE62262BD5365800726A56 /* LaunchScreen.storyboard */,
@@ -168,6 +175,7 @@
 		A3CE624E2BD5464600726A56 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A3CE626A2BD5B7BD00726A56 /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -199,6 +207,47 @@
 				A3CE625E2BD59E2200726A56 /* HomeViewCoordinator.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A3CE62622BD5AEAC00726A56 /* RepositoryInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62632BD5AF6500726A56 /* HomeViewRepositoryType.swift */,
+			);
+			path = RepositoryInterfaces;
+			sourceTree = "<group>";
+		};
+		A3CE62652BD5AFF800726A56 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62672BD5B15600726A56 /* Entities */,
+				A3CE62662BD5B14E00726A56 /* UseCases */,
+				A3CE62622BD5AEAC00726A56 /* RepositoryInterfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A3CE62662BD5B14E00726A56 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE62682BD5B21D00726A56 /* HomeViewUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A3CE62672BD5B15600726A56 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A3CE626A2BD5B7BD00726A56 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A3CE626B2BD5B7D700726A56 /* HomeViewRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,14 +381,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3CE625F2BD59E2200726A56 /* HomeViewCoordinator.swift in Sources */,
+				A3CE62692BD5B21D00726A56 /* HomeViewUseCase.swift in Sources */,
 				A3CE625D2BD5878300726A56 /* HomeView.swift in Sources */,
 				A3CE62512BD5519A00726A56 /* Coordinator.swift in Sources */,
 				A3CE62532BD551B900726A56 /* AppCoordinator.swift in Sources */,
+				A3CE626C2BD5B7D700726A56 /* HomeViewRepository.swift in Sources */,
 				A3CE625B2BD5877500726A56 /* HomeViewModel.swift in Sources */,
 				A3CE621C2BD5365600726A56 /* AppDelegate.swift in Sources */,
 				A3CE62612BD59E9100726A56 /* HomeViewModelType.swift in Sources */,
 				A3CE62562BD5527200726A56 /* DependenciesContainer.swift in Sources */,
 				A3CE62592BD5876300726A56 /* HomeViewController.swift in Sources */,
+				A3CE62642BD5AF6500726A56 /* HomeViewRepositoryType.swift in Sources */,
 				A3CE621E2BD5365600726A56 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

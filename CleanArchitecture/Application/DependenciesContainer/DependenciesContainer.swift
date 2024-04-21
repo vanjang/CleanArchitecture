@@ -16,14 +16,18 @@ struct DependenciesContainer {
 // MARK: - Home View Dependencies container
 extension DependenciesContainer {
     // MARK: - Use Cases
-    // to be implemented
+    func makeHomeViewUseCase() -> HomeViewUseCaseType {
+        HomeViewUseCase(repository: makeHomeViewRepository())
+    }
     
     // MARK: - Repository
-    // to be implemented
+    func makeHomeViewRepository() -> HomeViewRepositoryType {
+        HomeViewRepository()
+    }
     
     // MARK: - View Model
     func makeHomeViewViewModel(action: HomeViewModelAction) -> HomeViewModelType {
-        HomeViewModel(action: action)
+        HomeViewModel(useCase: makeHomeViewUseCase(), action: action)
     }
     
     // MARK: - Controllers
