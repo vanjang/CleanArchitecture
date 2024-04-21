@@ -40,7 +40,7 @@ final class HomeView: UIView {
         imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         proceedButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         proceedButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -150).isActive = true
