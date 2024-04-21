@@ -12,6 +12,7 @@ final class HomeView: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
+        imageView.accessibilityIdentifier = "HomeViewImageViewID"
         return imageView
     }()
 
@@ -19,6 +20,7 @@ final class HomeView: UIView {
         let button = UIButton()
         button.setTitle("Go to Collection", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "HomeViewProceedButtonID"
         return button
     }()
     
