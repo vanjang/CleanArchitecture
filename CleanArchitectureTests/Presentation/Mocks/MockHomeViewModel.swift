@@ -23,6 +23,6 @@ final class MockHomeViewModel: HomeViewModelType {
             .sink(receiveValue: action.pushToCollection)
             .store(in: &cancellables)
         
-        return HomeViewModelOutput(useCase.fetch()).eraseToAnyPublisher()
+        return HomeViewModelOutput(useCase.getHomeImageString()).eraseToAnyPublisher()
     }
 }

@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A36F84EE2BD6A2D300B9D515 /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84ED2BD6A2D300B9D515 /* ArtObject.swift */; };
+		A36F84F02BD6BF8700B9D515 /* HeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84EF2BD6BF8700B9D515 /* HeaderImage.swift */; };
+		A36F84F22BD6BF9000B9D515 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84F12BD6BF9000B9D515 /* Links.swift */; };
+		A36F84F42BD6BFC400B9D515 /* CollectionPageRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84F32BD6BFC400B9D515 /* CollectionPageRepositoryType.swift */; };
+		A36F84F62BD6C00000B9D515 /* CollectionPageUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84F52BD6C00000B9D515 /* CollectionPageUseCases.swift */; };
+		A36F84F82BD6C45D00B9D515 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84F72BD6C45D00B9D515 /* Collection.swift */; };
+		A36F84FA2BD6C98300B9D515 /* CollectionPageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84F92BD6C98300B9D515 /* CollectionPageRepository.swift */; };
+		A36F84FF2BD6CE0700B9D515 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F84FE2BD6CE0700B9D515 /* DataTransferService.swift */; };
+		A36F85012BD6D4E400B9D515 /* LocalDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F85002BD6D4E400B9D515 /* LocalDataTransferService.swift */; };
+		A36F85032BD6D50800B9D515 /* CollectionDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F85022BD6D50800B9D515 /* CollectionDataTransferService.swift */; };
+		A36F85052BD6E02300B9D515 /* LocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F85042BD6E02300B9D515 /* LocalDataService.swift */; };
+		A36F85072BD6E08D00B9D515 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F85062BD6E08D00B9D515 /* NetworkService.swift */; };
+		A36F85092BD6EE4200B9D515 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F85082BD6EE4200B9D515 /* AppDependencyContainer.swift */; };
 		A3CE621C2BD5365600726A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE621B2BD5365600726A56 /* AppDelegate.swift */; };
 		A3CE621E2BD5365600726A56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE621D2BD5365600726A56 /* SceneDelegate.swift */; };
 		A3CE62252BD5365800726A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CE62242BD5365800726A56 /* Assets.xcassets */; };
@@ -48,6 +61,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A36F84ED2BD6A2D300B9D515 /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
+		A36F84EF2BD6BF8700B9D515 /* HeaderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImage.swift; sourceTree = "<group>"; };
+		A36F84F12BD6BF9000B9D515 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		A36F84F32BD6BFC400B9D515 /* CollectionPageRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPageRepositoryType.swift; sourceTree = "<group>"; };
+		A36F84F52BD6C00000B9D515 /* CollectionPageUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPageUseCases.swift; sourceTree = "<group>"; };
+		A36F84F72BD6C45D00B9D515 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		A36F84F92BD6C98300B9D515 /* CollectionPageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPageRepository.swift; sourceTree = "<group>"; };
+		A36F84FE2BD6CE0700B9D515 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		A36F85002BD6D4E400B9D515 /* LocalDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataTransferService.swift; sourceTree = "<group>"; };
+		A36F85022BD6D50800B9D515 /* CollectionDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataTransferService.swift; sourceTree = "<group>"; };
+		A36F85042BD6E02300B9D515 /* LocalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataService.swift; sourceTree = "<group>"; };
+		A36F85062BD6E08D00B9D515 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A36F85082BD6EE4200B9D515 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		A3CE62182BD5365600726A56 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CE621B2BD5365600726A56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3CE621D2BD5365600726A56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +126,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A36F84FB2BD6CBF600B9D515 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A36F84FD2BD6CDEE00B9D515 /* DataTransferService */,
+				A36F84FC2BD6CBFE00B9D515 /* NetworkService */,
+				A36F85042BD6E02300B9D515 /* LocalDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A36F84FC2BD6CBFE00B9D515 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				A36F85062BD6E08D00B9D515 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		A36F84FD2BD6CDEE00B9D515 /* DataTransferService */ = {
+			isa = PBXGroup;
+			children = (
+				A36F84FE2BD6CE0700B9D515 /* DataTransferService.swift */,
+				A36F85002BD6D4E400B9D515 /* LocalDataTransferService.swift */,
+				A36F85022BD6D50800B9D515 /* CollectionDataTransferService.swift */,
+			);
+			path = DataTransferService;
+			sourceTree = "<group>";
+		};
 		A3CE620F2BD5365600726A56 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +180,7 @@
 				A3CE624B2BD5462300726A56 /* Application */,
 				A3CE624C2BD5462A00726A56 /* Entity */,
 				A3CE624D2BD5463500726A56 /* Presenters */,
+				A36F84FB2BD6CBF600B9D515 /* Services */,
 				A3CE62652BD5AFF800726A56 /* Domain */,
 				A3CE624E2BD5464600726A56 /* Data */,
 				A3CE62242BD5365800726A56 /* Assets.xcassets */,
@@ -199,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				A3CE62552BD5527200726A56 /* DependenciesContainer.swift */,
+				A36F85082BD6EE4200B9D515 /* AppDependencyContainer.swift */,
 			);
 			path = DependenciesContainer;
 			sourceTree = "<group>";
@@ -219,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				A3CE62632BD5AF6500726A56 /* HomeViewRepositoryType.swift */,
+				A36F84F32BD6BFC400B9D515 /* CollectionPageRepositoryType.swift */,
 			);
 			path = RepositoryInterfaces;
 			sourceTree = "<group>";
@@ -237,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A3CE62682BD5B21D00726A56 /* HomeViewUseCase.swift */,
+				A36F84F52BD6C00000B9D515 /* CollectionPageUseCases.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -244,6 +302,10 @@
 		A3CE62672BD5B15600726A56 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A36F84ED2BD6A2D300B9D515 /* ArtObject.swift */,
+				A36F84EF2BD6BF8700B9D515 /* HeaderImage.swift */,
+				A36F84F12BD6BF9000B9D515 /* Links.swift */,
+				A36F84F72BD6C45D00B9D515 /* Collection.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -252,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				A3CE626B2BD5B7D700726A56 /* HomeViewRepository.swift */,
+				A36F84F92BD6C98300B9D515 /* CollectionPageRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -429,18 +492,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36F84FF2BD6CE0700B9D515 /* DataTransferService.swift in Sources */,
 				A3CE625F2BD59E2200726A56 /* HomeViewCoordinator.swift in Sources */,
 				A3CE62692BD5B21D00726A56 /* HomeViewUseCase.swift in Sources */,
 				A3CE625D2BD5878300726A56 /* HomeView.swift in Sources */,
+				A36F84F02BD6BF8700B9D515 /* HeaderImage.swift in Sources */,
+				A36F85072BD6E08D00B9D515 /* NetworkService.swift in Sources */,
 				A3CE62512BD5519A00726A56 /* Coordinator.swift in Sources */,
 				A3CE62532BD551B900726A56 /* AppCoordinator.swift in Sources */,
+				A36F85052BD6E02300B9D515 /* LocalDataService.swift in Sources */,
 				A3CE626C2BD5B7D700726A56 /* HomeViewRepository.swift in Sources */,
+				A36F84F82BD6C45D00B9D515 /* Collection.swift in Sources */,
+				A36F85032BD6D50800B9D515 /* CollectionDataTransferService.swift in Sources */,
+				A36F84F22BD6BF9000B9D515 /* Links.swift in Sources */,
 				A3CE625B2BD5877500726A56 /* HomeViewModel.swift in Sources */,
 				A3CE621C2BD5365600726A56 /* AppDelegate.swift in Sources */,
+				A36F84EE2BD6A2D300B9D515 /* ArtObject.swift in Sources */,
+				A36F85092BD6EE4200B9D515 /* AppDependencyContainer.swift in Sources */,
 				A3CE62612BD59E9100726A56 /* HomeViewModelType.swift in Sources */,
+				A36F84F62BD6C00000B9D515 /* CollectionPageUseCases.swift in Sources */,
 				A3CE62562BD5527200726A56 /* DependenciesContainer.swift in Sources */,
+				A36F85012BD6D4E400B9D515 /* LocalDataTransferService.swift in Sources */,
 				A3CE62592BD5876300726A56 /* HomeViewController.swift in Sources */,
+				A36F84F42BD6BFC400B9D515 /* CollectionPageRepositoryType.swift in Sources */,
 				A3CE62642BD5AF6500726A56 /* HomeViewRepositoryType.swift in Sources */,
+				A36F84FA2BD6C98300B9D515 /* CollectionPageRepository.swift in Sources */,
 				A3CE621E2BD5365600726A56 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
