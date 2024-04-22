@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct HeaderImage: Decodable {
+    let guid: String
+    let width: Int
+    let height: Int
+    let url: String
+}

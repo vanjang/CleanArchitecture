@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct ArtObject: Decodable {
+    let links: Links
+    let id: String
+    let objectNumber: String
+    let title: String
+    let longTitle: String
+    let headerImage: HeaderImage
+}

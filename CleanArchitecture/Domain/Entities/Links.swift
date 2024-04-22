@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Links: Decodable {
+    let selfLink: String
+    let web: String
+    
+    enum CodingKeys: String, CodingKey {
+        case selfLink = "self"
+        case web = "web"
+       }
+}
