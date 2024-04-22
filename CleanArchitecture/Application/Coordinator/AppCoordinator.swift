@@ -9,15 +9,16 @@ import UIKit
 
 struct AppCoordinator: Coordinator {
     private let navigationController: UINavigationController
-    private let dependencies: DependenciesContainer
+    private let appDependencies: AppDependencyContainer
     
-    init(navigationController: UINavigationController, dependencies: DependenciesContainer) {
+    init(navigationController: UINavigationController, dependencies: AppDependencyContainer) {
         self.navigationController = navigationController
-        self.dependencies = dependencies
+        self.appDependencies = dependencies
     }
     
     func start() {
-        let flow = dependencies.makeHomeViewCoordinator(navigationController: navigationController)
+        let appDependencyContainer = appDependencies.makeAppDependenciesContainer()
+        let flow = appDependencyContainer.makeHomeViewCoordinator(navigationController: navigationController)
         flow.start()
     }
 }

@@ -8,14 +8,25 @@
 import Foundation
 import Combine
 
-final class HomeViewRepository: HomeViewRepositoryType {
+final class HomeViewRepository {
+    let localDataTransferService: DataTransferService
+    
+    init(localDataTransferService: DataTransferService) {
+        self.localDataTransferService = localDataTransferService
+    }
+}
+
+extension HomeViewRepository: HomeViewRepositoryType {
     func fetchHomeImageString() -> AnyPublisher<String, Never> {
-        var defaultImageString = "frans_hals"
-        if let infoDict = Bundle.main.infoDictionary {
-            if let value = infoDict["Home View Image String"] as? String {
-                defaultImageString = value
+        let infoDictionary: AnyPublisher<(Result<String, any Error>), Never> = localDataTransferService.request()
+        return infoDictionary
+            .map { result -> String in
+                switch result {
+                case .success(let imageString):
+                    return imageString
+                default: return ""
+                }
             }
-        }
-        return Just(defaultImageString).eraseToAnyPublisher()
+            .eraseToAnyPublisher()
     }
 }

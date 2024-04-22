@@ -9,7 +9,14 @@ import UIKit
 
 struct DependenciesContainer {
     struct Dependencies {
-        // to be implemented
+        let localDataTransferService: DataTransferService
+        let apiDataTransferService: DataTransferService
+    }
+    
+    private let dependencies: Dependencies
+    
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
     }
 }
 
@@ -22,7 +29,7 @@ extension DependenciesContainer {
     
     // MARK: - Repository
     func makeHomeViewRepository() -> HomeViewRepositoryType {
-        HomeViewRepository()
+        HomeViewRepository(localDataTransferService: dependencies.localDataTransferService)
     }
     
     // MARK: - View Model
