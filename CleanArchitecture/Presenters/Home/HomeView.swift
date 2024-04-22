@@ -23,6 +23,14 @@ final class HomeView: UIView {
         button.accessibilityIdentifier = "HomeViewProceedButtonID"
         return button
     }()
+
+    let aboutRijkMuseumButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("About Rijks Museum", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "HomeViewAboutButtonID"
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,6 +44,7 @@ final class HomeView: UIView {
     private func setUpUI() {
         addSubview(imageView)
         addSubview(proceedButton)
+        addSubview(aboutRijkMuseumButton)
         
         imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
@@ -44,6 +53,9 @@ final class HomeView: UIView {
         
         proceedButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         proceedButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -150).isActive = true
+        
+        aboutRijkMuseumButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        aboutRijkMuseumButton.topAnchor.constraint(equalTo: proceedButton.bottomAnchor, constant: 6).isActive = true
     }
     
     func configure(imageString: String) {

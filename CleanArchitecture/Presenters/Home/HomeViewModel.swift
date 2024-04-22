@@ -19,9 +19,15 @@ final class HomeViewModel: HomeViewModelType {
     
     func connect(input: HomeViewModelInput) -> HomeViewModelOutput {
         input
+            .proceedButtonTap
             .sink(receiveValue: action.pushToCollection)
             .store(in: &cancellables)
             
+        input
+            .aboutButtonTap
+            .sink(receiveValue: action.pushToAboutPage)
+            .store(in: &cancellables)
+                
         return HomeViewModelOutput(useCase.fetch())
     }
 

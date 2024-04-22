@@ -11,6 +11,7 @@ import Combine
 final class HomeViewController: UIViewController {
     private let viewModel: HomeViewModelType
     private let proceedButtonTap = PassthroughSubject<Void, Never>()
+    private let aboutButtonTap = PassthroughSubject<Void, Never>()
     private var cancellables: [AnyCancellable] = []
     
     init(viewModel: HomeViewModelType) {
@@ -32,8 +33,10 @@ final class HomeViewController: UIViewController {
         guard let view = self.view as? HomeView else { return }
         
         view.proceedButton.addTarget(self, action: #selector(proceedButtonTapped(_:)), for: .touchUpInside)
+        view.aboutRijkMuseumButton.addTarget(self, action: #selector(aboutButtonTapped(_:)), for: .touchUpInside)
         
-        let input = HomeViewModelInput(proceedButtonTap)
+        let input = HomeViewModelInput(proceedButtonTap: proceedButtonTap.eraseToAnyPublisher(),
+                                       aboutButtonTap: aboutButtonTap.eraseToAnyPublisher())
         
         viewModel.connect(input: input)
             .sink(receiveValue: view.configure)
@@ -43,4 +46,8 @@ final class HomeViewController: UIViewController {
     @objc func proceedButtonTapped(_ sender: UIButton) {
         proceedButtonTap.send(())
       }
+    
+    @objc func aboutButtonTapped(_ sender: UIButton) {
+        aboutButtonTap.send(())
+    }
 }

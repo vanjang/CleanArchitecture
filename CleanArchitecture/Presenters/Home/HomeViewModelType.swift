@@ -7,11 +7,16 @@
 
 import Combine
 
-typealias HomeViewModelInput = AnyPublisher<Void, Never>
+struct HomeViewModelInput {
+    let proceedButtonTap: AnyPublisher<Void, Never>
+    let aboutButtonTap: AnyPublisher<Void, Never>
+}
+
 typealias HomeViewModelOutput = AnyPublisher<String, Never>
 
 struct HomeViewModelAction {
     let pushToCollection: () -> Void
+    let pushToAboutPage: () -> Void
 }
 
 protocol HomeViewModelType {

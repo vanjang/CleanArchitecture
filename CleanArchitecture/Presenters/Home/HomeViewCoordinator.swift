@@ -17,12 +17,16 @@ struct HomeViewCoordinator: Coordinator {
     }
     
     func start() {
-        let homeViewAction = HomeViewModelAction(pushToCollection: pushToCollection)
+        let homeViewAction = HomeViewModelAction(pushToCollection: pushToCollection, pushToAboutPage: pushToAboutPage)
         let vc = dependencies.makeHomeViewController(action: homeViewAction)
         navigationController.pushViewController(vc, animated: true)
     }
     
     func pushToCollection() {
         print("pushToCollection")
+    }
+    
+    func pushToAboutPage() {
+        print("pushToAboutPage")
     }
 }
