@@ -12,6 +12,7 @@ import Combine
 final class HomeViewModelTests: XCTestCase {
     private var cancellables: [AnyCancellable] = []
     private let proceedButtonTap = PassthroughSubject<Void, Never>()
+    private let pushToAboutPageTap = PassthroughSubject<Void, Never>()
     private var didProceedButtonTap = false
     
     func makeMockHomeRepository() -> HomeViewRepositoryType {
@@ -23,16 +24,21 @@ final class HomeViewModelTests: XCTestCase {
     }
     
     func makeMockHomeViewModel() -> HomeViewModelType {
-        MockHomeViewModel(useCase: makeMockHomeUseCase(), action: HomeViewModelAction(pushToCollection: pushToCollection))
+        MockHomeViewModel(useCase: makeMockHomeUseCase(), action: HomeViewModelAction(pushToCollection: pushToCollection, pushToAboutPage: pushToAboutPage))
     }
     
     func pushToCollection() {
         didProceedButtonTap = !didProceedButtonTap
     }
     
+    func pushToAboutPage() {
+        
+    }
+    
     func testHomeViewModelOutput() throws {
         let viewModel = makeMockHomeViewModel()
-        let input = HomeViewModelInput(Just(()))
+//        let input = HomeViewModelInput(Just(()))
+        let input = HomeViewModelInput(proceedButtonTap: proceedButtonTap.eraseToAnyPublisher(), aboutButtonTap: pushToAboutPageTap.eraseToAnyPublisher())
         let output = viewModel.connect(input: input)
         let expectation = expectation(description: "image name")
         var imageName = ""
@@ -52,7 +58,7 @@ final class HomeViewModelTests: XCTestCase {
     
     func testHomeViewModelInput() throws {
         let viewModel = makeMockHomeViewModel()
-        let input = HomeViewModelInput(proceedButtonTap)
+        let input = HomeViewModelInput(proceedButtonTap: proceedButtonTap.eraseToAnyPublisher(), aboutButtonTap: pushToAboutPageTap.eraseToAnyPublisher())
         let output = viewModel.connect(input: input)
         
         proceedButtonTap.send(())

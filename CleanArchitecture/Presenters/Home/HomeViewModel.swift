@@ -28,7 +28,7 @@ final class HomeViewModel: HomeViewModelType {
             .sink(receiveValue: action.pushToAboutPage)
             .store(in: &cancellables)
                 
-        return HomeViewModelOutput(useCase.getHomeImageString())
+        return HomeViewModelOutput(useCase.getHomeImageString().replaceError(with: ""))
     }
 
     deinit {

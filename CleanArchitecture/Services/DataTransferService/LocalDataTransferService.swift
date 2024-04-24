@@ -16,13 +16,16 @@ final class LocalDataTransferService {
 }
 
 extension LocalDataTransferService: DataTransferService {
-    func request<T: Decodable>() -> AnyPublisher<(Result<T, Error>), Never> {
+    func request<T: Decodable>() -> AnyPublisher<T, Error> {
         var defaultImageString = "frans_hals"
         if let infoDict = localDataService.infoDictionary {
             if let value = infoDict["Home View Image String"] as? String {
                 defaultImageString = value
             }
         }
-        return Just(.success(defaultImageString as! T)).eraseToAnyPublisher()
+        
+        return Just(defaultImageString as! T)
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
     }
 }

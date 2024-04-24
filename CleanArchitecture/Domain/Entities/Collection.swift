@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Collection {
+struct Collection: Decodable {
     let artObjects: [ArtObject]
 }

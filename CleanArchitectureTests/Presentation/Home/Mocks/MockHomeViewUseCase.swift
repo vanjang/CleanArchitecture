@@ -15,7 +15,7 @@ final class MockHomeViewUseCase: HomeViewUseCaseType {
         self.mockRepository = mockRepository
     }
     
-    func fetch() -> AnyPublisher<String, Never> {
+    func getHomeImageString() -> AnyPublisher<String, Error> {
         mockRepository.fetchHomeImageString()
     }
 }

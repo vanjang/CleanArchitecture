@@ -20,9 +20,10 @@ final class MockHomeViewModel: HomeViewModelType {
 
     func connect(input: CleanArchitecture.HomeViewModelInput) -> CleanArchitecture.HomeViewModelOutput {
         input
+            .proceedButtonTap
             .sink(receiveValue: action.pushToCollection)
             .store(in: &cancellables)
         
-        return HomeViewModelOutput(useCase.getHomeImageString()).eraseToAnyPublisher()
+        return HomeViewModelOutput(useCase.getHomeImageString().replaceError(with: "")).eraseToAnyPublisher()
     }
 }

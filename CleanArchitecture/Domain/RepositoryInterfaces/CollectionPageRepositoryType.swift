@@ -8,5 +8,5 @@
 import Combine
 
 protocol CollectionPageRepositoryType {
-    func fetchCollection() -> AnyPublisher<Collection, Never>
+    func fetchCollection(load: PassthroughSubject<Void, Never>) -> AnyPublisher<Collection, Error>
 }

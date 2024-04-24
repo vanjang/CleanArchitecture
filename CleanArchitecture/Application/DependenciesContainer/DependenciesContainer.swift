@@ -22,14 +22,14 @@ struct DependenciesContainer {
 
 // MARK: - Home View Dependencies container
 extension DependenciesContainer {
-    // MARK: - Use Cases
-    func makeHomeViewUseCase() -> HomeViewUseCaseType {
-        HomeViewUseCase(repository: makeHomeViewRepository())
-    }
-    
     // MARK: - Repository
     func makeHomeViewRepository() -> HomeViewRepositoryType {
         HomeViewRepository(localDataTransferService: dependencies.localDataTransferService)
+    }
+    
+    // MARK: - Use Cases
+    func makeHomeViewUseCase() -> HomeViewUseCaseType {
+        HomeViewUseCase(repository: makeHomeViewRepository())
     }
     
     // MARK: - View Model

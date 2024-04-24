@@ -9,7 +9,9 @@ import Combine
 @testable import CleanArchitecture
 
 final class MockHomeViewRepository: HomeViewRepositoryType {
-    func fetchHomeImageString() -> AnyPublisher<String, Never> {
-        Just("mockImageString").eraseToAnyPublisher()
+    func fetchHomeImageString() -> AnyPublisher<String, Error> {
+        Just("mockImageString")
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
     }
 }

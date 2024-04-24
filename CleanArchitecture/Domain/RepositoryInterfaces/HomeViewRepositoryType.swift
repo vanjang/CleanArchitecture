@@ -8,5 +8,5 @@
 import Combine
 
 protocol HomeViewRepositoryType {
-    func fetchHomeImageString() -> AnyPublisher<String, Never>
+    func fetchHomeImageString() -> AnyPublisher<String, Error>
 }

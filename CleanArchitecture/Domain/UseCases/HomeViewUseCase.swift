@@ -8,7 +8,7 @@
 import Combine
 
 protocol HomeViewUseCaseType {
-    func getHomeImageString() -> AnyPublisher<String, Never>
+    func getHomeImageString() -> AnyPublisher<String, Error>
 }
 
 final class HomeViewUseCase: HomeViewUseCaseType {
@@ -18,7 +18,7 @@ final class HomeViewUseCase: HomeViewUseCaseType {
         self.repository = repository
     }
     
-    func getHomeImageString() -> AnyPublisher<String, Never> {
+    func getHomeImageString() -> AnyPublisher<String, Error> {
         repository.fetchHomeImageString()
     }
 }

@@ -8,7 +8,7 @@
 import Combine
 
 protocol CollectionPageUseCaseType {
-    func getArtObject() -> AnyPublisher<[ArtObject], Never>
+    func getArtObject(load: PassthroughSubject<Void, Never>) -> AnyPublisher<[ArtObject], Error>
 }
 
 final class CollectionPageUseCases: CollectionPageUseCaseType {
@@ -18,7 +18,7 @@ final class CollectionPageUseCases: CollectionPageUseCaseType {
         self.repository = repository
     }
     
-    func getArtObject() -> AnyPublisher<[ArtObject], Never> {
-        repository.fetchCollection().map { $0.artObjects }.eraseToAnyPublisher()
+    func getArtObject(load: PassthroughSubject<Void, Never>) -> AnyPublisher<[ArtObject], Error> {
+        repository.fetchCollection(load: load).map { $0.artObjects }.eraseToAnyPublisher()
     }
 }
