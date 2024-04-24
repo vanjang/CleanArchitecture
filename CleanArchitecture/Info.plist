@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>RIJKS Museum API Key</key>
+	<string>${RIJKS_MUSEUM_API_KEY}</string>
 	<key>Home View Image String</key>
 	<string>frans_hals</string>
 	<key>UIApplicationSceneManifest</key>
