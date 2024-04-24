@@ -17,16 +17,8 @@ final class HomeViewRepository {
 }
 
 extension HomeViewRepository: HomeViewRepositoryType {
-    func fetchHomeImageString() -> AnyPublisher<String, Never> {
-        let infoDictionary: AnyPublisher<(Result<String, any Error>), Never> = localDataTransferService.request()
-        return infoDictionary
-            .map { result -> String in
-                switch result {
-                case .success(let imageString):
-                    return imageString
-                default: return ""
-                }
-            }
-            .eraseToAnyPublisher()
+    func fetchHomeImageString() -> AnyPublisher<String, Error> {
+        let infoDictionary: AnyPublisher<String, Error> = localDataTransferService.request()
+        return infoDictionary.eraseToAnyPublisher()
     }
 }
