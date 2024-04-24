@@ -47,3 +47,31 @@ extension DependenciesContainer {
         HomeViewCoordinator(navigationController: navigationController, dependencies: self)
     }
 }
+
+// MARK: - Collection Page View Dependencies container
+extension DependenciesContainer {
+    // MARK: - Repository
+    func makeHCollectionPageViewRepository() -> CollectionPageRepositoryType {
+        CollectionPageRepository(apiDataTransferService: dependencies.apiDataTransferService)
+    }
+    
+    // MARK: - Use Cases
+    func makeCollectionPageViewUseCase() -> CollectionPageUseCases {
+        CollectionPageUseCases(repository: makeHCollectionPageViewRepository())
+    }
+    
+    // MARK: - View Model
+    func makeCollectionPageViewViewModel() -> CollectionPageViewModel {
+        CollectionPageViewModel(useCase: makeCollectionPageViewUseCase())
+    }
+    
+    // MARK: - Controllers
+    func makeCollectionPageViewController() -> UIViewController {
+        CollectionPageViewController(viewModel: makeCollectionPageViewViewModel())
+    }
+    
+    // MARK: - Flow Coordinators
+    func makeCollectionPageViewCoordinator(navigationController: UINavigationController) -> Coordinator {
+        CollectionPageCoordinator(navigationController: navigationController, dependencies: self)
+    }
+}

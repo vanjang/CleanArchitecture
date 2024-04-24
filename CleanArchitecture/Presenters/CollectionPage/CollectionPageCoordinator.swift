@@ -1,13 +1,13 @@
 //
-//  HomeViewCoordinator.swift
+//  CollectionPageCoordinator.swift
 //  CleanArchitecture
 //
-//  Created by myung hoon on 21/04/2024.
+//  Created by myung hoon on 24/04/2024.
 //
 
 import UIKit
 
-struct HomeViewCoordinator: Coordinator {
+struct CollectionPageCoordinator: Coordinator {
     private let navigationController: UINavigationController
     private let dependencies: DependenciesContainer
     
@@ -17,16 +17,7 @@ struct HomeViewCoordinator: Coordinator {
     }
     
     func start() {
-        let homeViewAction = HomeViewModelAction(pushToCollection: pushToCollection, pushToAboutPage: pushToAboutPage)
-        let vc = dependencies.makeHomeViewController(action: homeViewAction)
+        let vc = dependencies.makeCollectionPageViewController()
         navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func pushToCollection() {
-        print("pushToCollection")
-    }
-    
-    func pushToAboutPage() {
-        print("pushToAboutPage")
     }
 }
